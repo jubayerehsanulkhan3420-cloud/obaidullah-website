@@ -1,1 +1,1 @@
-script.js
+alert("Welcome to Obaidullah's World!");
