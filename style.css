@@ -58,3 +58,17 @@ nav a {
 nav a:hover {
   color: #3b82f6;
   }
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h2 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #6b7280;
+  }
