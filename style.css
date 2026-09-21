@@ -85,3 +85,20 @@ nav a:hover {
 #learnMoreBtn:hover {
   background-color: #2563eb;
 }
+.about {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f8fafc;
+}
+
+.about h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.about p {
+  max-width: 600px;
+  margin: auto;
+  color: #6b7280;
+  line-height: 1.6;
+}
