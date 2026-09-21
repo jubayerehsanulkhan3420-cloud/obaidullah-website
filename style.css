@@ -122,3 +122,18 @@ nav a:hover {
 .project-card:hover {
   transform: translateY(-5px);
   }
+.contact {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f8fafc;
+}
+
+.contact h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  color: #6b7280;
+  margin-bottom: 25px;
+  }
