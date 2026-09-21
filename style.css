@@ -150,3 +150,9 @@ nav a:hover {
 .contact button:hover {
   background-color: #2563eb;
   }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  }
