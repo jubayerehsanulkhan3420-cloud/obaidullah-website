@@ -159,3 +159,14 @@ header {
 header {
   border-bottom: 1px solid #e5e7eb;
 }
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  nav {
+    gap: 15px;
+  }
+}
