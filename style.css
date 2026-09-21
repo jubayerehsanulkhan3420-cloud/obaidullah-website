@@ -156,3 +156,6 @@ header {
   align-items: center;
   padding: 20px 40px;
   }
+header {
+  border-bottom: 1px solid #e5e7eb;
+}
