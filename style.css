@@ -35,3 +35,12 @@ button {
   border: 3px solid black;
   border-radius: 10px;
 }
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.logo span {
+  color: #3b82f6;
+}
