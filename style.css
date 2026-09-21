@@ -106,3 +106,16 @@ nav a:hover {
   border-radius: 20px;
   margin: 30px 20px;
 }
+.projects {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.project-card {
+  max-width: 500px;
+  margin: 30px auto 0;
+  padding: 25px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  }
