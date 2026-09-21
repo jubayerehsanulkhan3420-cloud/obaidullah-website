@@ -156,6 +156,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
+  background-color: white;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   }
 header {
   border-bottom: 1px solid #e5e7eb;
