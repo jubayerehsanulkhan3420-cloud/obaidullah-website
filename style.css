@@ -82,14 +82,7 @@ nav a:hover {
   color: white;
   font-size: 16px;
   cursor: pointer;
-}
-#learnMoreBtn:hover {
-  background-color: #2563eb;
-  transform: scale(1.05);
-  transition: 0.3s;
   font-weight: bold;
-  font-size: 16px;
-  text-align: center;
 }
 .learning-more:hover {
   transform: scale(1.1);
