@@ -85,7 +85,7 @@ nav a:hover {
 }
 #learnMoreBtn:hover {
   background-color: #2563eb;
-  transform: translateY(-2px);
+  transform: scale(1.05);
 }
 .about {
   text-align: center;
