@@ -89,6 +89,9 @@ nav a:hover {
   background-color: #6C5CE7;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+.learning-more:active {
+  transform: scale(0.95);
+}
 .about {
   text-align: center;
   padding: 60px 20px;
