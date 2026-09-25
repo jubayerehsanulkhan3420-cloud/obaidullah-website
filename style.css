@@ -219,3 +219,18 @@ body {
   margin: 20px;
   font-size: 18px;
 }
+#searchResults {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+#searchResults h2 {
+  margin-bottom: 10px;
+}
+
+#searchResults p {
+  font-size: 16px;
+}
