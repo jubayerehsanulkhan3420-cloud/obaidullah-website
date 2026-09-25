@@ -23,3 +23,8 @@ document.getElementById("searchInput").addEventListener("keydown", function(even
     search();
   }
 });
+const learnMoreBtn = document.getElementById("learnMoreBtn");
+
+learnMoreBtn.addEventListener("click", function() {
+  alert("Welcome to Obaidullah's World!");
+});
