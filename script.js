@@ -4,7 +4,9 @@ contactBtn.addEventListener("click", function() {
   alert("Thanks for visiting Obaidullah's website!");
 });
 
-function search() {
+const searchBtn = document.getElementById("searchBtn");
+
+searchBtn.addEventListener("click", function() {
   let query = document.getElementById("searchInput").value;
 
   if (query !== "") {
@@ -13,4 +15,4 @@ function search() {
       "<p>You searched for: <b>" + query + "</b></p>" +
       "<p>Welcome to Obaidullah's World!</p>";
   }
-}
+});
