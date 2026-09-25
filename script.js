@@ -16,3 +16,5 @@ document.getElementById("searchInput").value;
   "https://www.google.com/search?q=" + encodeURIComponentP(query);
   }
 }
+document .getElementById("searchResults").innerHTML =
+  welcome to Obaidullahs world search!;
