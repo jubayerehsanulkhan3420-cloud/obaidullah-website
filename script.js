@@ -19,5 +19,13 @@ function search() {
   }
 }
 
-document.getElementById("searchResults").innerHTML =
-  "Welcome to Obaidullah's World Search!";
+function showResult() {
+  let query = document.getElementById("searchInput").value;
+
+  if (query !== "") {
+    document.getElementById("searchResults").innerHTML =
+      "<h2>Search Result</h2>" +
+      "<p>You searched for: <b>" + query + "</b></p>" +
+      "<p>Welcome to Obaidullah's World!</p>";
+  }
+}
