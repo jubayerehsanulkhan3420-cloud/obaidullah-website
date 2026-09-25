@@ -3,18 +3,21 @@ const button = document.getElementById("learnMoreBtn");
 button.addEventListener("click", function() {
   alert("Welcome to Obaidullah's World!");
 });
+
 const contactBtn = document.getElementById("contactBtn");
 
 contactBtn.addEventListener("click", function() {
   alert("Thanks for visiting Obaidullah's website!");
 });
+
 function search() {
-  let query =
-document.getElementById("searchInput").value;
+  let query = document.getElementById("searchInput").value;
+
   if (query !== "") {
     window.location.href =
-  "https://www.google.com/search?q=" + encodeURIComponentP(query);
+      "https://www.google.com/search?q=" + encodeURIComponent(query);
   }
 }
-document .getElementById("searchResults").innerHTML =
-  welcome to Obaidullahs world search!;
+
+document.getElementById("searchResults").innerHTML =
+  "Welcome to Obaidullah's World Search!";
