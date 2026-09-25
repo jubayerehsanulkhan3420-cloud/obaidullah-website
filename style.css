@@ -285,3 +285,10 @@ body {
 #contactBtn:hover {
   transform: scale(1.05);
   }
+#learnMoreBtn {
+  transition: 0.3s;
+}
+
+#learnMoreBtn:hover {
+  transform: translateY(-3px);
+}
