@@ -7,7 +7,16 @@ contactBtn.addEventListener("click", function() {
 
 
 const searchBtn = document.getElementById("searchBtn");
+const searchInput = document.getElementById("searchInput");
 
+searchBtn.addEventListener("click", function() {
+  const searchText = searchInput.value;
+
+  if (searchText.trim() !== "") {
+    window.location.href =
+      "https://www.google.com/search?q=" + encodeURIComponent(searchText);
+  }
+});
 searchBtn.addEventListener("click", function() {
   let query = document.getElementById("searchInput").value;
 
