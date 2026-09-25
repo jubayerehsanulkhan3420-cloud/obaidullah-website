@@ -312,3 +312,29 @@ body {
 .project-card:hover {
   transform: translateY(-5px);
 }
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .hero h2 {
+    font-size: 30px;
+  }
+
+  .search-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #searchInput {
+    width: 80%;
+  }
+    }
