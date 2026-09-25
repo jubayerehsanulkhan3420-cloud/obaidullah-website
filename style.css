@@ -338,3 +338,10 @@ body {
     width: 80%;
   }
     }
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #ddd;
+  }
