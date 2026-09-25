@@ -30,3 +30,11 @@ learnMoreBtn.addEventListener("click", function() {
   document.getElementById("learnMoreText").innerHTML =
     "Welcome to Obaidullah's World! Here you can learn more about my brother and his journey.";
 });
+const topBtn = document.getElementById("topBtn");
+
+topBtn.addEventListener("click", function() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
