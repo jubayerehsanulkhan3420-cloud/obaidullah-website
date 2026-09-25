@@ -5,8 +5,9 @@ contactBtn.addEventListener("click", function() {
 });
 
 const searchBtn = document.getElementById("searchBtn");
+searchBtn.addEventListener("click", search);
 
-searchBtn.addEventListener("click", function() {
+function search() {
   let query = document.getElementById("searchInput").value;
 
   if (query !== "") {
@@ -14,5 +15,11 @@ searchBtn.addEventListener("click", function() {
       "<h2>Search Result</h2>" +
       "<p>You searched for: <b>" + query + "</b></p>" +
       "<p>Welcome to Obaidullah's World!</p>";
+  }
+}
+
+document.getElementById("searchInput").addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    search();
   }
 });
