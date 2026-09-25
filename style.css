@@ -234,3 +234,25 @@ body {
 #searchResults p {
   font-size: 16px;
 }
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#searchInput {
+  padding: 12px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+#searchBtn {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  }
