@@ -278,3 +278,10 @@ body {
     transform: translateY(0);
   }
     }
+#contactBtn {
+  transition: 0.3s;
+}
+
+#contactBtn:hover {
+  transform: scale(1.05);
+  }
