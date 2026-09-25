@@ -353,3 +353,8 @@ footer {
   cursor: pointer;
   font-size: 15px;
 }
+#topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
