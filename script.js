@@ -1,7 +1,8 @@
 const contactBtn = document.getElementById("contactBtn");
 
 contactBtn.addEventListener("click", function() {
-  alert("Thanks for visiting Obaidullah's website!");
+  document.getElementById("contactMessage").innerHTML =
+    "Thanks for visiting Obaidullah's website! I hope you enjoyed exploring my world.";
 });
 
 const searchBtn = document.getElementById("searchBtn");
