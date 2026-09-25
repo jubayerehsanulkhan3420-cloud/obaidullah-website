@@ -198,3 +198,19 @@ body {
   color: #6b7280;
   line-height: 1.6;
       }
+.search-box {
+  text-align: center;
+  margin: 30px;
+}
+.search-box input {
+  padding: 12px;
+  width: 250px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.search-box button {
+  padding: 12px 20px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 8px;
+}
