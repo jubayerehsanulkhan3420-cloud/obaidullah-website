@@ -26,5 +26,6 @@ document.getElementById("searchInput").addEventListener("keydown", function(even
 const learnMoreBtn = document.getElementById("learnMoreBtn");
 
 learnMoreBtn.addEventListener("click", function() {
-  alert("Welcome to Obaidullah's World!");
+  document.getElementById("learnMoreText").innerHTML =
+    "Welcome to Obaidullah's World! Here you can learn more about my brother and his journey.";
 });
