@@ -1,66 +1,609 @@
-<link rel="stylesheet" href="style.css">
-<header>
-<h1 class="logo">Obaidullah<span>.</span></h1>
-<nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
-</nav>
-</header>
-<section id="home" class="hero">
-  <h2>Hi, I'm Obaidullah.</h2>
-  <p>Web Developer | Learner | Dreamer</p>
-  <button id="learnMoreBtn">Learn More</button>
-  <p id="learnMoreText"></p>
-</section>
-<section id="about" class="about">
-  <h2>Who I Am</h2>
-  <p>
-    I am Obaidullah. I am learning web development and
-    working to build my skills every day.
-  </p>
-</section>
-<section id="projects" class="projects">
-  <h2>My Projects</h2>
 
-  <div class="project-card">
-    <h3>My First Website</h3>
-    <p>A simple website I created while learning web development.</p>
-  </div>
-</section>
-<section id="contact" class="contact">
-  <h2>Contact Me</h2>
-  <p>Want to get in touch? Send me a message.</p>
-  <button id="contactBtn">Contact</button>
-  <p id="contactMessage"></p>
-</section>
-<p>
-  Obaidullah is my younger brother.
-  He is very cute, honest and helpful.
-  I love my little brother very much.
-</p>
 
-<h2>About My Brother</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<p>
-  Obaidullah is a good boy.
-  He is friendly and kind.
-  I am very happy to have a brother like him.
-</p>
+  <title>Obaidullah's World | Personal Website</title>
 
-<section class="about">
-  <h2>About Me</h2>
-  <p>Welcome to my website. I am learning web development and building my skills step by step.</p>
-</section>
-<div class="search-box">
-  <input type="text" id="searchInput" placeholder="Search something...">
-  <button id="searchBtn">Search</button>
-</div>
+  <meta name="description"
+    content="Welcome to Obaidullah's World — a personal website for learning, creativity and projects.">
 
-<div id="searchResults"></div>
-<footer>
-  <p>© 2026 Obaidullah's World. All Rights Reserved.</p>
-</footer>
-<button id="topBtn">↑ Top</button>
-<script src="script.js"></script>
+  <style>
+    /* ---------- Basic settings ---------- */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1020;
+      color: #f1f5f9;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    /* ---------- Navigation ---------- */
+
+    header {
+      background: rgba(11, 16, 32, 0.95);
+      border-bottom: 1px solid #25304a;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: bold;
+      color: #7dd3fc;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #cbd5e1;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #7dd3fc;
+    }
+
+    /* ---------- Hero section ---------- */
+
+    .hero {
+      min-height: 540px;
+      display: flex;
+      align-items: center;
+      padding: 75px 0;
+      background:
+        radial-gradient(ellipse at 80% 20%, #1e3a5f 0%, transparent 45%),
+        #0b1020;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .tag {
+      display: inline-block;
+      color: #7dd3fc;
+      background: #14243b;
+      border: 1px solid #294663;
+      padding: 7px 14px;
+      border-radius: 30px;
+      margin-bottom: 22px;
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 7vw, 68px);
+      line-height: 1.12;
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      color: #7dd3fc;
+    }
+
+    .hero p {
+      color: #aebbd0;
+      font-size: 18px;
+      max-width: 580px;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 9px;
+      font-weight: bold;
+      border: 1px solid #7dd3fc;
+      cursor: pointer;
+      transition: 0.2s;
+      font-size: 15px;
+    }
+
+    .btn-primary {
+      background: #7dd3fc;
+      color: #0b1020;
+    }
+
+    .btn-secondary {
+      color: #7dd3fc;
+      background: transparent;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      opacity: 0.9;
+    }
+
+    /* ---------- General sections ---------- */
+
+    section {
+      padding: 80px 0;
+      scroll-margin-top: 75px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-heading h2 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .section-heading p {
+      color: #9caec5;
+    }
+
+    /* ---------- About ---------- */
+
+    .about-box {
+      max-width: 800px;
+      margin: auto;
+      background: #121a2d;
+      border: 1px solid #26334d;
+      border-radius: 16px;
+      padding: 30px;
+    }
+
+    .about-box p {
+      color: #c1ccdc;
+      margin-bottom: 15px;
+    }
+
+    .interests {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .interest {
+      background: #1d2b43;
+      color: #bfe9ff;
+      padding: 7px 13px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    /* ---------- Projects ---------- */
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .project-card {
+      background: #121a2d;
+      border: 1px solid #26334d;
+      padding: 25px;
+      border-radius: 15px;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: #7dd3fc;
+    }
+
+    .project-icon {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .project-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      color: #aebbd0;
+      font-size: 15px;
+    }
+
+    /* ---------- Search ---------- */
+
+    .search-box {
+      max-width: 650px;
+      margin: auto;
+      background: #121a2d;
+      padding: 25px;
+      border: 1px solid #26334d;
+      border-radius: 15px;
+    }
+
+    .search-box p {
+      color: #aebbd0;
+      margin-bottom: 16px;
+    }
+
+    .search-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .search-row input {
+      flex: 1;
+      min-width: 0;
+      padding: 13px;
+      border: 1px solid #36445e;
+      background: #0b1020;
+      color: white;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .search-row input:focus {
+      outline: 2px solid #7dd3fc;
+    }
+
+    .search-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    /* ---------- Contact ---------- */
+
+    .contact-box {
+      text-align: center;
+      max-width: 650px;
+      margin: auto;
+      background: #121a2d;
+      border: 1px solid #26334d;
+      border-radius: 15px;
+      padding: 35px;
+    }
+
+    .contact-box p {
+      color: #aebbd0;
+      margin: 12px 0 22px;
+    }
+
+    /* ---------- Footer ---------- */
+
+    footer {
+      text-align: center;
+      padding: 25px 0;
+      border-top: 1px solid #25304a;
+      color: #8796ad;
+      font-size: 14px;
+    }
+
+    /* ---------- Mobile layout ---------- */
+
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px 0;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        font-size: 14px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 75px 0;
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .search-row {
+        flex-direction: column;
+      }
+
+      .search-row .btn {
+        width: 100%;
+      }
+
+      .section-heading h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="container">
+      <a href="#home" class="logo">Obaidullah<span>'s</span> World</a>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#search">Search</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+
+          <div class="tag">Welcome to my little world</div>
+
+          <h1>
+            Hi, I'm <span>Obaidullah.</span>
+          </h1>
+
+          <p>
+            A curious learner, creative thinker and future web developer.
+            This is my space to explore ideas, build projects and learn
+            something new every day.
+          </p>
+
+          <div class="buttons">
+            <a href="#projects" class="btn btn-primary">
+              Explore My Projects
+            </a>
+
+            <a href="#about" class="btn btn-secondary">
+              Learn More
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>About Me</h2>
+          <p>A little introduction</p>
+        </div>
+
+        <div class="about-box">
+          <p>
+            Hello! I'm Obaidullah. I enjoy discovering new things,
+            learning technology and spending time on activities I love.
+          </p>
+
+          <p>
+            I'm currently learning and exploring the world of websites
+            and creative projects. My goal is to keep improving,
+            one step at a time.
+          </p>
+
+          <div class="interests">
+            <span class="interest">💻 Technology</span>
+            <span class="interest">⚽ Football</span>
+            <span class="interest">🏏 Cricket</span>
+            <span class="interest">♟️ Chess</span>
+            <span class="interest">🚀 Learning</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>My Projects</h2>
+          <p>Things I'm building and learning</p>
+        </div>
+
+        <div class="project-grid">
+
+          <article class="project-card">
+            <div class="project-icon">🌐</div>
+            <h3>My Personal Website</h3>
+            <p>
+              A website to introduce myself, share my interests
+              and show what I'm learning.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-icon">🎮</div>
+            <h3>Mini Games</h3>
+            <p>
+              Small games and fun experiments made while
+              practising web development.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-icon">💡</div>
+            <h3>Future Ideas</h3>
+            <p>
+              New ideas, creative experiments and projects
+              that I hope to build in the future.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Search -->
+    <section id="search">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>Explore the Internet</h2>
+          <p>Search for something interesting</p>
+        </div>
+
+        <div class="search-box">
+          <p>Type a topic and choose where you want to search.</p>
+
+          <form id="searchForm">
+            <div class="search-row">
+              <input
+                id="searchInput"
+                type="search"
+                placeholder="What do you want to find?"
+                aria-label="Search the internet"
+                required
+              >
+
+              <button class="btn btn-primary" type="submit">
+                Google
+              </button>
+            </div>
+
+            <div class="search-buttons">
+              <button
+                class="btn btn-secondary"
+                type="button"
+                id="youtubeBtn"
+              >
+                Search YouTube
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>Get in Touch</h2>
+          <p>Thanks for visiting my website!</p>
+        </div>
+
+        <div class="contact-box">
+          <h3>Let's connect</h3>
+
+          <p>
+            Have an idea, a question or something interesting to share?
+            I'd love to hear about it.
+          </p>
+
+          <a href="#home" class="btn btn-primary">
+            Back to Home
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>
+        © <span id="year"></span> Obaidullah's World.
+        Made with curiosity and creativity.
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Show the current year automatically
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Search Google or YouTube
+    const searchForm = document.getElementById("searchForm");
+    const searchInput = document.getElementById("searchInput");
+    const youtubeBtn = document.getElementById("youtubeBtn");
+
+    function searchWebsite(site) {
+      const query = searchInput.value.trim();
+
+      if (query === "") {
+        searchInput.focus();
+        return;
+      }
+
+      const encodedQuery = encodeURIComponent(query);
+
+      let searchURL;
+
+      if (site === "youtube") {
+        searchURL =
+          "https://www.youtube.com/results?search_query=" +
+          encodedQuery;
+      } else {
+        searchURL =
+          "https://www.google.com/search?q=" +
+          encodedQuery;
+      }
+
+      window.open(searchURL, "_blank", "noopener,noreferrer");
+    }
+
+    searchForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+      searchWebsite("google");
+    });
+
+    youtubeBtn.addEventListener("click", function() {
+      searchWebsite("youtube");
+    });
+  </script>
+
+</body>
+</html>
